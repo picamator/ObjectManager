@@ -2,7 +2,6 @@
 namespace Picamator\ObjectManager;
 
 use Picamator\ObjectManager\Api\ObjectManagerSingletonInterface;
-use Picamator\ObjectManager\RuntimeException;
 
 /**
  * Creates objects, the main usage inside factories

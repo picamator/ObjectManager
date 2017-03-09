@@ -1,0 +1,12 @@
+version: '2'
+services:
+  object-manager-php:
+    build:
+        context : ../..
+        dockerfile: bin/docker/php/Dockerfile
+        args:
+          - host_ip
+    volumes:
+      - ../../:/ObjectManager
+    ports:
+       - "2240:22"

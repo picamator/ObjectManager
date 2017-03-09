@@ -31,10 +31,11 @@ class ObjectManagerSingleton implements ObjectManagerSingletonInterface
 
     /**
      * Singleton implementation require private clone
+     *
+     * @codeCoverageIgnore
      */
     private function __clone()
     {
-
     }
 
     /**

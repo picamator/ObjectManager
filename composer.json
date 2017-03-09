@@ -1,7 +1,7 @@
 {
     "name": "picamator/object-manager",
-    "description": "Factory method to create objects",
-    "keywords": ["factory", "object", "manager"],
+    "description": "It's one class tool to build objects supplied with a Singleton wrapper and unit test stub helper",
+    "keywords": ["factory", "object", "utility"],
     "license": "MIT",
     "authors": [
         {

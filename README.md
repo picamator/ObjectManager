@@ -2,8 +2,8 @@ ObjectManager
 =============
 
 [![PHP 7 ready](http://php7ready.timesplinter.ch/picamator/ObjectManager/dev/badge.svg)](https://travis-ci.org/picamator/ObjectManager)
-[![Latest Stable Version](https://poser.pugx.org/picamator/objectmanager/v/stable.svg)](https://packagist.org/packages/picamator/objectmanager)
-[![License](https://poser.pugx.org/picamator/objectmanager/license.svg)](https://packagist.org/packages/picamator/objectmanager)
+[![Latest Stable Version](https://poser.pugx.org/picamator/object-manager/v/stable.svg)](https://packagist.org/packages/picamator/object-manager)
+[![License](https://poser.pugx.org/picamator/object-manager/license.svg)](https://packagist.org/packages/picamator/object-manager)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/fe0853b9-7842-47bc-9460-da9bc407a9b7/mini.png)](https://insight.sensiolabs.com/projects/fe0853b9-7842-47bc-9460-da9bc407a9b7)
 
 Master

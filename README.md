@@ -75,8 +75,8 @@ class UserRepository
 }
 ```
 
-Inside unit test before running the test needs to stub ``ObjectManagerSingleton`` with mock ``ObjectManagerSingleton::setInstance($mockObjectManager);``.
-Having such mock is open the door to mock ``Connection`` class.
+Inside unit test before running the test needs to stub ``ObjectManagerSingleton`` with mock ``ObjectManagerSingleton::setInstance($mockObjectManager)``.
+Having such is open the door for mocking ``Connection`` class.
 
 Please follow [link](docs/example/Legacy) to find example source and unit test for them.
 
@@ -118,7 +118,7 @@ class ConnectionFactory
 }
 
 ```
-As a result it's possible now to use Dependency Injection to override ``$className`` supplying new implementation.
+As a result it's possible to use Dependency Injection to override ``$className`` with new implementation.
 With PHP 7 features ``ConnectionFactory`` would look like:
 
 ```php

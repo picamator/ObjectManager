@@ -25,11 +25,6 @@ class ObjectManager implements ObjectManagerInterface
             return new $className();
         }
 
-        // construction does not available
-        if (method_exists($className, '__construct') === false) {
-            throw new RuntimeException(sprintf('Class "%s" does not have __construct', $className));
-        }
-
         return $this->getReflection($className)
             ->newInstanceArgs($arguments);
     }
@@ -43,9 +38,16 @@ class ObjectManager implements ObjectManagerInterface
      */
     private function getReflection($className)
     {
-        if (empty($this->reflectionContainer[$className])) {
-            $this->reflectionContainer[$className] = new \ReflectionClass($className);
+        if (isset($this->reflectionContainer[$className])) {
+            return $this->reflectionContainer[$className];
         }
+
+        // construction does not available
+        if (method_exists($className, '__construct') === false) {
+            throw new RuntimeException(sprintf('Class "%s" does not have __construct', $className));
+        }
+
+        $this->reflectionContainer[$className] = new \ReflectionClass($className);
 
         return $this->reflectionContainer[$className];
     }

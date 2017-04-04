@@ -35,7 +35,15 @@ class ObjectManagerTest extends BaseTest
     /**
      * @expectedException \Picamator\ObjectManager\Exception\RuntimeException
      */
-    public function testFailCreate()
+    public function testFailNoClassCreate()
+    {
+        $this->objectManager->create('NotExistingClass', [1, 2]);
+    }
+
+    /**
+     * @expectedException \Picamator\ObjectManager\Exception\RuntimeException
+     */
+    public function testFailNoConstructCreate()
     {
         $this->objectManager->create('Picamator\ObjectManager\ObjectManager', [1, 2]);
     }

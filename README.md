@@ -70,7 +70,7 @@ class UserRepository
     
     public function __construct() 
     {
-        $this->connection = ObjectManagerSingleton::getInstance()->create();    
+        $this->connection = ObjectManagerSingleton::getInstance()->create('Connection');    
     }
 }
 ```

@@ -22,6 +22,7 @@ class ObjectManager implements ObjectManagerInterface
     public function create($className, array $arguments = [])
     {
         if (empty($arguments)) {
+            // for performance reason ``class_exists`` is not checked here
             return new $className();
         }
 
@@ -42,8 +43,11 @@ class ObjectManager implements ObjectManagerInterface
             return $this->reflectionContainer[$className];
         }
 
-        // construction does not available
-        if (method_exists($className, '__construct') === false) {
+        if (!class_exists($className)) {
+            throw new RuntimeException(sprintf('Class "%s" does not exist', $className));
+        }
+
+        if (!method_exists($className, '__construct')) {
             throw new RuntimeException(sprintf('Class "%s" does not have __construct', $className));
         }
 
